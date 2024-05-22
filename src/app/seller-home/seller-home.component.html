@@ -1,0 +1,38 @@
+<!-- <div class="product-list">
+    <h1>All Products</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Category</th>
+                <th>Description</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of productList">
+                <td>{{item.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+-->
+<div class="outer container-fluid">
+    <p style="color: green; text-align: center;">{{productDeletedMessage}}</p>
+    <p style="color: rgb(9, 144, 9); text-align: center;">{{productDeletedMessage}}</p>
+    <div class="card" *ngFor="let item of productList" >
+        <div  class="text-center" >
+             <h4 class="containt">{{item.pname}}</h4>
+             <img src={{item.image}} width="95%" height="300px" style="border-radius: 10px;"/>
+             <p class="containt">Price:{{item.price}}</p>
+             <p class="containt">Color:{{item.color}}</p>
+             <p class="containt">Category:{{item.category}}</p>
+             <p class="containt">Description:{{item.description}}</p>
+             <button class="btn" (click)="deleteProduct(item.id)">Delete</button>
+             <button class="btn"><a routerLink="/seller-update-product/{{item.id}}" style="text-decoration: none; color: white;">Update</a></button>
+
+        </div>
+    </div> 
+</div>

@@ -1,0 +1,166 @@
+{
+  "seller": [
+    {
+      "uname": "keshav",
+      "upass": "keshav@1234",
+      "uemail": "keshav@gmail.com",
+      "id": 1
+    },
+    {
+      "uname": "Lord Krishna",
+      "upass": "krishna@1234",
+      "uemail": "krishna@gmail.com",
+      "id": 5
+    },
+    {
+      "uname": "test",
+      "upass": "test@1234",
+      "uemail": "test@gmail.com",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "pname": "vivo T1 X",
+      "category": "mobile",
+      "color": "blue",
+      "price": "20000",
+      "description": "Value For Money",
+      "image": "https://m.media-amazon.com/images/I/51W5VnK7aDL._SY741_.jpg",
+      "sellerId": 5,
+      "id": 1
+    },
+    {
+      "pname": "Comfort Chair",
+      "category": "Chair",
+      "color": "black",
+      "price": "8000",
+      "description": "Feels like cotton",
+      "image": "https://www.nilkamalfurniture.com/cdn/shop/files/Skelton1strls.jpg?v=1695384772&width=720",
+      "sellerId": 5,
+      "id": 2
+    },
+    {
+      "pname": "Shoes",
+      "category": "Shoes",
+      "color": "white",
+      "price": "5000",
+      "description": "Wear and Tear",
+      "image": "https://m.media-amazon.com/images/I/61lnX1lRCWL._AC_SL1500_.jpg",
+      "sellerId": 5,
+      "id": 3
+    },
+    {
+      "pname": "Forest A10",
+      "category": "Watch",
+      "color": "black",
+      "price": "1500",
+      "description": "See future in your hand",
+      "image": "https://m.media-amazon.com/images/I/71br0cbzA-L._AC_SL1500_.jpg",
+      "sellerId": 5,
+      "id": 4
+    },
+    {
+      "pname": "Poco Mobile cover",
+      "category": "Mobile Cover",
+      "color": "none",
+      "price": "199",
+      "description": "Will not get yellowish",
+      "image": "https://m.media-amazon.com/images/I/61nmCIcASoL._AC_SL1239_.jpg",
+      "sellerId": 5,
+      "id": 5
+    },
+    {
+      "pname": "Stylish T-Shirt",
+      "category": "T-Shirt",
+      "color": "blue",
+      "price": "499",
+      "description": "Highly Comfortable",
+      "image": "https://m.media-amazon.com/images/I/61r0T-La3GL._AC_SL1000_.jpg",
+      "sellerId": 5,
+      "id": 6
+    },
+    {
+      "pname": "Jeans",
+      "category": "Jeans",
+      "color": "blue",
+      "price": "1799",
+      "description": "Get Updated With Fassion",
+      "image": "https://m.media-amazon.com/images/I/617rRtzsYDL._AC_SL1400_.jpg",
+      "sellerId": 5,
+      "id": 7
+    },
+    {
+      "pname": "Digital Pressure Cooker",
+      "category": "Utensil",
+      "color": "black",
+      "price": "7999",
+      "description": "Bake Your Food Digitally",
+      "image": "https://m.media-amazon.com/images/I/71FOIBG5f2L._AC_SL1500_.jpg",
+      "sellerId": 5,
+      "id": 8
+    },
+    {
+      "pname": "Micarel Watch",
+      "category": "Watch",
+      "color": "gold",
+      "price": "9299",
+      "description": "Premium Ladies Watch ",
+      "image": "https://m.media-amazon.com/images/I/519R+JBfeyL._SL1000_.jpg",
+      "sellerId": 5,
+      "id": 10
+    },
+    {
+      "pname": "HP Laptop",
+      "category": "Laptop",
+      "color": "white",
+      "price": "150000",
+      "description": "Intel Octa Core Processor",
+      "image": "https://m.media-amazon.com/images/I/7163+lZRgcL._SL1500_.jpg",
+      "sellerId": 5,
+      "id": 11
+    },
+    {
+      "pname": "Keyboard",
+      "category": "Electronic",
+      "color": "white",
+      "price": "900",
+      "description": "Keys Are Very Smooth",
+      "image": "https://m.media-amazon.com/images/I/61l76udL5rL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+      "sellerId": 1,
+      "id": 12
+    }
+  ],
+  "user": [
+    {
+      "name": "Jack Sparrow",
+      "email": "jack@gmail.com",
+      "pass": "jack@1234",
+      "id": 1
+    },
+    {
+      "name": "keshav",
+      "email": "keshav@gmail.com",
+      "pass": "keshav1234",
+      "id": 2
+    },
+    {
+      "name": "Tejas",
+      "email": "tejas@gmail.com",
+      "pass": "tejas@1234",
+      "id": 3
+    }
+  ],
+  "cart": [],
+  "orders": [
+    {
+      "fname": "Keshav",
+      "email": "keshav@gmail.com",
+      "address": "Karjat",
+      "paymentMethod": "cashOnDelivery",
+      "totalAmount": "1014100 INR",
+      "userId": 2,
+      "id": 1
+    }
+  ]
+}

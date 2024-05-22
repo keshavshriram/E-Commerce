@@ -1,0 +1,27 @@
+.card
+{
+height: 540px;
+width: 300px;
+background-color: gold;
+border: 1px solid black;
+display: inline-block;
+margin-left: 20px;
+margin-bottom: 20px;
+
+}
+.containt
+{
+    margin-top: auto;
+    
+}
+.btn
+{
+    background-color: blueviolet;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    color: white;
+}
+/* .outer
+{
+    
+} */

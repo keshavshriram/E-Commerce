@@ -1,0 +1,49 @@
+<!-- my-orders.component.html -->
+
+<div class="my-orders-container">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">My Orders</h4>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Order ID</th>
+                                            <th>Date</th>
+                                            <th>Total Amount</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let product of orderListIs">
+                                            <td><img src="https://play-lh.googleusercontent.com/TRAtU82Bic_WGA6LudhGaC1SZ_QzaXM2Q0--kx-53Q7rybuG6H_GCH8wht8HL5eZm64=w240-h480-rw" height="100" alt="Product Image" class="product-image"></td>
+                                            <td>{{product.id}}</td>
+                                            <td>13 th May 2002</td>
+                                            <td>{{product.totalAmount}}</td>
+                                            <td>dispatched</td>
+                                            <td><button (click)="cancelMyOrder(product.id)">Cancel Order</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <ng-template #noOrders>
+                            <div class="alert alert-info" role="alert">
+                                You haven't placed any orders yet.
+                            </div>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

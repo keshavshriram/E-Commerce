@@ -1,0 +1,51 @@
+/* my-orders.component.css */
+
+.my-orders-container {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #007bff;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-header h4 {
+  margin: 0;
+  padding: 15px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.table {
+  background-color: #fff;
+}
+
+.table th,
+.table td {
+  border: none;
+}
+
+.table th {
+  font-weight: 600;
+  color: #495057;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.alert-info {
+  background-color: #f1f8ff;
+  border-color: #c0e2ff;
+}
+

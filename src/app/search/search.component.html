@@ -1,0 +1,31 @@
+<div *ngIf="noProductMessage==0">
+    <h2  style="text-align: center; margin-top: 220px; color: rgb(229, 41, 41);">No Product Found....</h2>
+</div>
+
+<div class="container-fluid" *ngIf="!(noProductMessage==0)">
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let item of productList">
+
+            <div class="product-item card" routerLink="/product/{{item.id}}">
+                <h5 class="text-center">{{item.pname}}</h5>
+                <img src={{item.image}} />
+
+                <div class="product-details">
+
+
+                    <h6 class="price-head">Price:{{item.price}}</h6>
+                    <h6 class="color-head">Color:{{item.color}}</h6>
+
+
+                </div>
+                <div class="product-footer">
+                    <a href="">View Details</a>
+                    <a href="">Add To Cart</a>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

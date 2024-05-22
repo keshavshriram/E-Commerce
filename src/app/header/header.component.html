@@ -1,0 +1,38 @@
+<nav class="nav">
+  <h1 routerLink="/"> <font style="font-family: italic;">E-COMMERCE</font></h1>
+  <div class="nav-search" *ngIf="menuType==='default' || menuType==='user'">
+    <input type="text" #searchBar (keyup)="searchProduct($event)" placeholder="Search Product" ngModel={{searchIns}} (blur)="unrenderComponent()"/>
+    <button (click)="searchButton(searchBar.value)">Search</button>
+    <ul *ngIf="searchResult" class="suggested-result">
+      <li *ngFor="let item of searchResult" (click)="insertSearch(item.pname)" >
+        <a #selectDone >{{item.pname}}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div [ngSwitch]="menuType">
+    <ul *ngSwitchCase="'default'" class="text-center">
+      <li routerLink=""><a >Home</a> </li>
+      <li routerLink="seller-auth"><a >Seller</a></li>
+      <li ><a href="/user-auth">Login/SignUp</a></li>
+      <li href="#"><a >Cart({{cartItems}})</a></li>
+    </ul>
+
+    <ul *ngSwitchCase="'user'" class="text-center">
+      <li routerLink=""><a >Home</a> </li>
+      <li routerLink="seller-auth"><a >Seller</a></li>
+      <li (click)="logOutUser()"><a >Logout</a></li>
+      <li routerLink="/my-orders"><a >My Orders</a></li>
+      <li [routerLink]="cartItems>0?'cart-page':null"><a >Cart({{cartItems}})</a></li>
+      <li><img src="https://as2.ftcdn.net/v2/jpg/02/29/75/83/1000_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" height="31"><a href="#"> {{userName}}</a></li>
+
+    </ul>
+
+    <ul *ngSwitchCase="'seller'" class="text-center">
+      <li><a routerLink="/seller-home">Product List</a> </li>
+      <li><a routerLink="seller-add-product">Add Product</a></li>
+      <li ><a routerLink="#" (click)="logOutSeller()">LogOut</a></li>
+      <li><a href="#" style="color: blue;">Wellcome {{sellerName}}</a></li>
+    </ul>
+  </div>
+</nav>

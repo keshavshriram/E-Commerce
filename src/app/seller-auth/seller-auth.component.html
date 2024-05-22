@@ -1,0 +1,35 @@
+<div class="seller-auth">
+    <div class="signup" *ngIf="display">
+        <h1>Sign Up</h1>
+                <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)" class="common-form" autocomplete="off">
+                    <input type="text" ngModel name="uname" placeholder="Enter User Name" class="form-input" required >
+                    <input type="password" ngModel name="upass" placeholder="Enter Password" class="form-input" required>
+                    <input type="email" ngModel name="uemail" placeholder="Enter Email" class="form-input" required>
+                    
+                    <button class="form-button">Submit</button>
+                    <button class="form-button">Reset</button>
+                </form>
+                <br/>
+                <a (click)="changeWindow()" style="cursor: pointer;" > Alredy have an account want to login </a>
+
+    </div>
+
+    <div class="signin" *ngIf="!display">
+        <h1>Sign In</h1>
+        <p style="color:red">{{authError}}</p>
+                <form #sellerSignIn="ngForm" (ngSubmit)="signIn(sellerSignIn.value)" class="common-form">
+                    <!-- <input type="text" ngModel name="uname" placeholder="Enter User Name" class="form-input"> -->
+                    <input type="email" ngModel name="uemail" placeholder="Enter Email" class="form-input" required>
+                    <input type="password" ngModel name="upass" placeholder="Enter Password" class="form-input" required>
+                    
+                    
+                    <button class="form-button">Submit</button>
+                    <button class="form-button">Reset</button>
+                    
+                </form>
+                <br/>
+                 <a (click)="changeWindow()" style="cursor: pointer;">Dont have an account wan to signup </a>
+
+    </div>
+</div>
+

@@ -8,6 +8,7 @@ import { cart, order, product } from 'src/data-type';
 export class ProductService {
   cartAllData = new EventEmitter<product[] | []>();
   constructor(private http: HttpClient) { }
+  apiUrl:string="https://ecommerce-backend-deployed.vercel.app";
 
   addProduct(data: product) {
     // console.log("Product service called");
@@ -16,34 +17,34 @@ export class ProductService {
     data.sellerId=sellerId;
 
     
-    return this.http.post("http://localhost:3000/products", data)
+    return this.http.post(this.apiUrl+"/products", data)
   }
 
   productList(sellerId:number) {
-    return this.http.get<product[]>(`http://localhost:3000/products?sellerId=${sellerId}`);
+    return this.http.get<product[]>(this.apiUrl+`/products?sellerId=${sellerId}`);
   }
 
   deleteFun(id: number) {
-    return this.http.delete(`http://localhost:3000/products/${id}`);
+    return this.http.delete(this.apiUrl+`/products/${id}`);
   }
 
   updateFun(id: string) {
-    return this.http.get<product>(`http://localhost:3000/products/${id}`);
+    return this.http.get<product>(this.apiUrl+`/products/${id}`);
   }
   setUpdate(data: product) {
-    return this.http.put<product>(`http://localhost:3000/products/${data.id}`, data)
+    return this.http.put<product>(this.apiUrl+`/products/${data.id}`, data)
   }
 
   productListHome() {
-    return this.http.get<product[]>('http://localhost:3000/products');
+    return this.http.get<product[]>(this.apiUrl+'/products');
   }
 
   searchProducts(querry: string) {
-    return this.http.get<product[]>(`http://localhost:3000/products?q=${querry}`);
+    return this.http.get<product[]>(this.apiUrl+`/products?q=${querry}`);
   }
 
   productDetails(id: string) {
-    return this.http.get<product>(`http://localhost:3000/products/${id}`);
+    return this.http.get<product>(this.apiUrl+`/products/${id}`);
   }
 
   localStorageCart(data: product) {
@@ -84,7 +85,7 @@ export class ProductService {
 
   addCart(cartData: cart) {
     console.log("Cart Data is:", cartData);
-    return this.http.post('http://localhost:3000/cart', cartData);
+    return this.http.post(this.apiUrl+'/cart', cartData);
 
   }
 
@@ -93,34 +94,34 @@ export class ProductService {
 
     // this.productService.cartAllData.emit(result);  <= this line not emitted here because to emit this line i should 
     // subscribe get method but after subcsription we cannot angain subscribe cartList method in user-auth-componenet file 
-    return this.http.get<product[]>(`http://localhost:3000/cart?userId=${id}`);
+    return this.http.get<product[]>(this.apiUrl+`/cart?userId=${id}`);
   }
 
   removeToCart(cartId:number)
   {
-    return this.http.delete("http://localhost:3000/cart/"+cartId);
+    return this.http.delete(this.apiUrl+"/cart/"+cartId);
   }
 
   cartElements(userId:string)
   {
-    return this.http.get<cart[]>(`http://localhost:3000/cart?userId=${userId}`);
+    return this.http.get<cart[]>(this.apiUrl+`/cart?userId=${userId}`);
   }
 
   orderNow(data:order)
   {
-    return this.http.post("http://localhost:3000/orders",data);
+    return this.http.post(this.apiUrl+"/orders",data);
   }
 
   orderList()
   {
     let user=localStorage.getItem('user');
     let userId=user && JSON.parse(user).id;
-    return this.http.get<order[]>(`http://localhost:3000/orders?userId=${userId}`);
+    return this.http.get<order[]>(this.apiUrl+`/orders?userId=${userId}`);
   }
 
   deleteCartItems(cartId:number)
   {
-    return this.http.delete("http://localhost:3000/cart/"+cartId,{observe:'response'}).subscribe((result)=>{
+    return this.http.delete(this.apiUrl+"/cart/"+cartId,{observe:'response'}).subscribe((result)=>{
       if(result)
       {
         this.cartAllData.emit([]);
@@ -130,7 +131,7 @@ export class ProductService {
 
   cancelOrder(orderId:number | undefined)
   {
-    return this.http.delete("http://localhost:3000/orders/"+orderId);
+    return this.http.delete(this.apiUrl+"/orders/"+orderId);
   }
 
 

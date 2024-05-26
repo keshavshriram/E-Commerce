@@ -10,12 +10,14 @@ import { UserSignUp, product, userSignIn } from 'src/data-type';
 })
 export class UserService {
   isUserLogIn = new EventEmitter<boolean>();
+  apiUrl:string="https://ecommerce-backend-deployed.vercel.app";
+
   constructor(private http: HttpClient, private router: Router) {
 
   }
 
   postUser(user: UserSignUp) {
-    return this.http.post('http://localhost:3000/user', user, { observe: 'response' }).subscribe((result) => {
+    return this.http.post(this.apiUrl+'/user', user, { observe: 'response' }).subscribe((result) => {
       console.log(result);
 
       if (result) {
@@ -36,7 +38,7 @@ export class UserService {
     // console.log(user);
 
     let userStatusPromise = new Promise((resolve, reject) => {
-      this.http.get(`http://localhost:3000/user?email=${user.email}&pass=${user.pass}`)
+      this.http.get(this.apiUrl+`/user?email=${user.email}&pass=${user.pass}`)
         .subscribe({
           next: (result: any) => {
             // console.log("Value to match , from database:", result);

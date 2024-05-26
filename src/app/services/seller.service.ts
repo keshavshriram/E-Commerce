@@ -10,12 +10,13 @@ import { Router } from '@angular/router';
 export class SellerService {
   isSellerLoggedIn=new BehaviorSubject<boolean>(false);
   isLogInError=new EventEmitter<boolean>(false);
+  apiUrl:string="https://ecommerce-backend-deployed.vercel.app";
 
   constructor(private http:HttpClient , private router:Router) { }
 
   userSignUp(data:SignUp)
   {
-    return this.http.post('http://localhost:3000/seller',
+    return this.http.post(this.apiUrl+'/seller',
     data,
     {observe:'response'}
     ).subscribe((result)=>{
@@ -30,7 +31,7 @@ export class SellerService {
   userSignIn(data:SignIn)
   {
     console.log(data);
-    this.http.get(`http://localhost:3000/seller?uemail=${data.uemail}&upass=${data.upass}`,{observe:'response'}).subscribe((result:any)=>{
+    this.http.get(this.apiUrl+`/seller?uemail=${data.uemail}&upass=${data.upass}`,{observe:'response'}).subscribe((result:any)=>{
       console.log(result);
       if(result && result.body && result.body.length )
       {

@@ -9,6 +9,7 @@
   border: none;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
 }
 
 .card-header {

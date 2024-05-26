@@ -151,7 +151,21 @@
       "id": 3
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "pname": "vivo T1 X",
+      "category": "mobile",
+      "color": "blue",
+      "price": "20000",
+      "description": "Value For Money",
+      "image": "https://m.media-amazon.com/images/I/51W5VnK7aDL._SY741_.jpg",
+      "sellerId": 5,
+      "id": 1,
+      "quantity": 1,
+      "userId": 2,
+      "productId": 1
+    }
+  ],
   "orders": [
     {
       "fname": "Keshav",
@@ -161,6 +175,15 @@
       "totalAmount": "1014100 INR",
       "userId": 2,
       "id": 1
+    },
+    {
+      "fname": "Keshav Shriram",
+      "email": "keshavshriram2002@gmail.com",
+      "address": "Narhe, Haveli , Pune ,Maharashtra",
+      "paymentMethod": "cashOnDelivery",
+      "totalAmount": "25100 INR",
+      "userId": 2,
+      "id": 2
     }
   ]
 }

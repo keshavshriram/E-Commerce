@@ -24,7 +24,7 @@
 
 img
 {
-    height:350px;
+    height:200px;
     width:100%; 
     border-bottom: 1px solid rgb(144, 156, 245);
     border-top: 1px solid rgb(144, 156, 245);
@@ -43,7 +43,7 @@ img
     border-bottom: 1px solid rgb(163, 139, 242);
     width: 100%;
 }
-.col-sm-3
+.col-sm-2
 {
     margin-bottom: 25px;
 }
@@ -54,4 +54,20 @@ img
     color: white;
     margin-left: 10px;
     margin: 8px;
+}
+
+/* .row
+{
+    margin-bottom: 20px;
+} */
+
+
+.card-header
+{
+    max-width: 100%;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    background: none;
+    text-overflow: ellipsis;
 }

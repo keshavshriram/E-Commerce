@@ -15,7 +15,7 @@
             <button *ngIf="!removeCart" class="btn" (click)="addToCart(fetchedProduct)">Add To Cart</button>
             <button *ngIf="removeCart" class="btn" (click)="removeFromCart(fetchedProduct.id)">Remove From Cart</button>
 
-            <button class="btn">Buy Now</button>
+            
             <div class="quantity">
                 <button (click)="handleQuantity('min')">--</button>
                 <input type="text" value={{productCount}}/>

@@ -3,10 +3,10 @@
 <div class="my-orders-container">
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="offset-md-1">
                 <div class="card">
                     <div class="card-header bg-primary text-white">
-                        <h4 class="mb-0">My Orders</h4>
+                        <h4 class="mb-0 text-center">My Orders</h4>
                     </div>
                     <div class="card-body">
                         <div>
@@ -16,7 +16,7 @@
                                         <tr>
                                             <th>Product</th>
                                             <th>Order ID</th>
-                                            <th>Date</th>
+                                            
                                             <th>Total Amount</th>
                                             <th>Status</th>
                                             <th>Action</th>
@@ -27,7 +27,7 @@
                                         <tr *ngFor="let product of orderListIs">
                                             <td><img src="https://freepngimg.com/thumb/cart/3-2-cart-png-hd.png" height="80"  ></td>
                                             <td>{{product.id}}</td>
-                                            <td>13 th May 2002</td>
+                                            
                                             <td>{{product.totalAmount}}</td>
                                             <td>dispatched</td>
                                             <td><button (click)="cancelMyOrder(product.id)">Cancel Order</button></td>

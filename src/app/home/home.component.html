@@ -1,26 +1,17 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3" *ngFor="let item of productList">
+        <div class="col-sm-2" *ngFor="let item of productList">
 
-            <div class="product-item card" >
-                <h4 class="text-center" routerLink="/product/{{item.id}}">{{item.pname}}</h4>
+            <div class="card">
+                <h4 class="card-header" routerLink="/product/{{item.id}}">{{item.pname}}</h4>
+
                 <a routerLink="/product/{{item.id}}"><img src={{item.image}} /></a>
 
                 <div class="product-details text-center">
-
-
                     <h6 class="price-head">Price:<b>{{item.price}}</b> Rs</h6>
-                    <h6 class="color-head">Color:{{item.color}}</h6>
-
-
+                    <h6 class="color-head">Color:{{item.category}}</h6>
                 </div>
-                <div class="product-footer">
-                    <!-- <button class="btn" >View Details</button>
-                    <button class="btn" >Add To Cart</button> -->
-                    <!-- (click)="cart(item)" -->
-
-
-                </div>
+                
             </div>
 
 

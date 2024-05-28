@@ -2,21 +2,15 @@
   "seller": [
     {
       "uname": "keshav",
-      "upass": "keshav@1234",
+      "upass": "keshav1234",
       "uemail": "keshav@gmail.com",
       "id": 1
     },
     {
       "uname": "Lord Krishna",
-      "upass": "krishna@1234",
+      "upass": "krishna1234",
       "uemail": "krishna@gmail.com",
-      "id": 5
-    },
-    {
-      "uname": "test",
-      "upass": "test@1234",
-      "uemail": "test@gmail.com",
-      "id": 6
+      "id": 2
     }
   ],
   "products": [
@@ -27,7 +21,7 @@
       "price": "20000",
       "description": "Value For Money",
       "image": "https://m.media-amazon.com/images/I/51W5VnK7aDL._SY741_.jpg",
-      "sellerId": 5,
+      "sellerId": 2,
       "id": 1
     },
     {
@@ -37,7 +31,7 @@
       "price": "8000",
       "description": "Feels like cotton",
       "image": "https://www.nilkamalfurniture.com/cdn/shop/files/Skelton1strls.jpg?v=1695384772&width=720",
-      "sellerId": 5,
+      "sellerId": 2,
       "id": 2
     },
     {
@@ -47,7 +41,7 @@
       "price": "5000",
       "description": "Wear and Tear",
       "image": "https://m.media-amazon.com/images/I/61lnX1lRCWL._AC_SL1500_.jpg",
-      "sellerId": 5,
+      "sellerId": 2,
       "id": 3
     },
     {
@@ -57,7 +51,7 @@
       "price": "1500",
       "description": "See future in your hand",
       "image": "https://m.media-amazon.com/images/I/71br0cbzA-L._AC_SL1500_.jpg",
-      "sellerId": 5,
+      "sellerId": 2,
       "id": 4
     },
     {
@@ -67,7 +61,7 @@
       "price": "199",
       "description": "Will not get yellowish",
       "image": "https://m.media-amazon.com/images/I/61nmCIcASoL._AC_SL1239_.jpg",
-      "sellerId": 5,
+      "sellerId": 2,
       "id": 5
     },
     {
@@ -87,7 +81,7 @@
       "price": "1799",
       "description": "Get Updated With Fassion",
       "image": "https://m.media-amazon.com/images/I/617rRtzsYDL._AC_SL1400_.jpg",
-      "sellerId": 5,
+      "sellerId": 2,
       "id": 7
     },
     {
@@ -97,7 +91,7 @@
       "price": "7999",
       "description": "Bake Your Food Digitally",
       "image": "https://m.media-amazon.com/images/I/71FOIBG5f2L._AC_SL1500_.jpg",
-      "sellerId": 5,
+      "sellerId": 2,
       "id": 8
     },
     {
@@ -107,7 +101,7 @@
       "price": "9299",
       "description": "Premium Ladies Watch ",
       "image": "https://m.media-amazon.com/images/I/519R+JBfeyL._SL1000_.jpg",
-      "sellerId": 5,
+      "sellerId": 2,
       "id": 10
     },
     {
@@ -117,7 +111,7 @@
       "price": "150000",
       "description": "Intel Octa Core Processor",
       "image": "https://m.media-amazon.com/images/I/7163+lZRgcL._SL1500_.jpg",
-      "sellerId": 5,
+      "sellerId": 2,
       "id": 11
     },
     {
@@ -135,7 +129,7 @@
     {
       "name": "Jack Sparrow",
       "email": "jack@gmail.com",
-      "pass": "jack@1234",
+      "pass": "jack1234",
       "id": 1
     },
     {
@@ -147,7 +141,7 @@
     {
       "name": "Tejas",
       "email": "tejas@gmail.com",
-      "pass": "tejas@1234",
+      "pass": "tejas1234",
       "id": 3
     }
   ],

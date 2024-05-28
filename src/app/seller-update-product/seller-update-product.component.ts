@@ -31,6 +31,7 @@ productUpdatedMessage:undefined | string ;
     if(this.productData)
     {
       data.id=this.productData.id;
+      data.sellerId=this.productData.sellerId;
     }
     // data.id=this.productData.id
     this.product.setUpdate(data).subscribe((result)=>{

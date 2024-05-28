@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { product } from 'src/data-type';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seller-add-product',
@@ -9,7 +10,7 @@ import { product } from 'src/data-type';
 })
 export class SellerAddProductComponent {
   addProductMessage:string | undefined;
-  constructor(private product:ProductService)
+  constructor(private product:ProductService, private router:Router)
   {
 
   }
@@ -23,7 +24,13 @@ export class SellerAddProductComponent {
       {
         this.addProductMessage='Product is succesfull added';
       }
-      setTimeout(()=>this.addProductMessage=undefined,3000);
+      setTimeout(()=>
+      {
+        this.router.navigate(['seller-home']);
+        this.addProductMessage=undefined
+      }
+      ,1000);
+      
       // this.product.addProduct.target.value=""
     });
   }

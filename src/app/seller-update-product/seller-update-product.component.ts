@@ -40,13 +40,14 @@ productUpdatedMessage:undefined | string ;
       {
         this.productUpdatedMessage="Product Updated Succesfully";
         
+        
        
       }
     });
     setTimeout(()=>{
       this.productUpdatedMessage=undefined;
       this.router.navigate(['seller-home']);
-    },2000);
+    },1000);
      
   }
 }

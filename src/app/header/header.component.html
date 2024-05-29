@@ -24,7 +24,7 @@
       <li (click)="logOutUser()"><a >Logout</a></li>
       <li routerLink="/my-orders"><a >My Orders</a></li>
       <li [routerLink]="cartItems>0?'cart-page':null"><a >Cart({{cartItems}})</a></li>
-      <li><img src="https://as2.ftcdn.net/v2/jpg/02/29/75/83/1000_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" height="31"><a href="#"> {{userName}}</a></li>
+      <li><span class="bi bi-person-circle"></span> {{userName}}</li>
 
     </ul>
 

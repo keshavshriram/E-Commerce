@@ -36,11 +36,11 @@ export class SellerHomeComponent implements OnInit {
       }
 
       let seller=localStorage.getItem('seller');
-      let sellerId=seller && JSON.parse(seller).id;
+      let sellerId=seller && JSON.parse(seller)[0].id;
       this.proList(sellerId);  //this line is to update seller home after deletion of product
       setTimeout(()=>{
         this.productDeletedMessage=undefined;
-      },3000);
+      },1000);
     });
 
     

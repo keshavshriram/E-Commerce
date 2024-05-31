@@ -1,5 +1,5 @@
 <nav class="nav">
-  <h1 routerLink="/"> <font style="font-family: italic;">E-COMMERCE</font></h1>
+  <h1 routerLink="/" style="font-family: italic; margin-top: 0.5%;"> <font >E-COMMERCE</font></h1>
   <div class="nav-search" *ngIf="menuType==='default' || menuType==='user'">
     <input type="text" #searchBar (keyup)="searchProduct($event)" placeholder="Search Product" ngModel={{searchIns}} (blur)="unrenderComponent()"/>
     <button (click)="searchButton(searchBar.value)">Search</button>

@@ -1,26 +1,30 @@
 <div class="container mt-5">
     <div class="row">
       <div class="col-md-6 offset-md-3">
-        <!-- <h2 style=""></h2> -->
+        
         
         <div class="card">
           <div class="card-header bg-primary text-white">
             <h4 class="mb-0">Checkout</h4>
           </div>
+
           <div class="card-body">
             <form #orderData="ngForm" (ngSubmit)="checkoutData(orderData.value)">
               <div class="mb-3">
                 <label for="fullName" class="form-label">Full Name</label>
                 <input type="text" class="form-control" id="fullName" name="fname" placeholder="Enter your full name" required ngModel>
               </div>
+
               <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required ngModel>
               </div>
+
               <div class="mb-3">
                 <label for="address" class="form-label">Shipping Address</label>
                 <textarea class="form-control" id="address" rows="3" name="address" placeholder="Enter your shipping address" required ngModel></textarea>
               </div>
+
               <div class="row mb-3">
                 <div class="col-sm-6">
                   <label for="paymentMethod" class="form-label">Payment Method</label>
@@ -31,6 +35,7 @@
                     <option value="bankTransfer" disabled>Bank Transfer</option>
                   </select>
                 </div>
+                
                 <div class="col-sm-6">
                   <label for="totalAmount" class="form-label">Total Amount</label>
                   <input type="text" class="form-control" id="totalAmount" name="totalAmount"  readonly [(ngModel)]="totalAmountRs">

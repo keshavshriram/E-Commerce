@@ -3,7 +3,7 @@
   <div class="nav-search" *ngIf="menuType==='default' || menuType==='user'">
     <input type="text" #searchBar (keyup)="searchProduct($event)" placeholder="Search Product" ngModel={{searchIns}} (blur)="unrenderComponent()"/>
     <button (click)="searchButton(searchBar.value)">Search</button>
-    <ul *ngIf="searchResult" class="suggested-result">
+    <ul *ngIf="searchResult" class="suggested-result"> 
       <li *ngFor="let item of searchResult" (click)="insertSearch(item.pname)" >
         <a #selectDone >{{item.pname}}</a>
       </li>

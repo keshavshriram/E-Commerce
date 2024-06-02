@@ -9,7 +9,7 @@
             <div>
                 <b>Color:</b><h1 class="product-color" [style.backgroundColor]="fetchedProduct.color"></h1>
             </div>
-            
+        
             <h4><b>Category:</b>{{fetchedProduct.category}}</h4>
             <h6><b>Description:</b>{{fetchedProduct.description}}</h6>
             <button *ngIf="!removeCart" class="btn" (click)="addToCart(fetchedProduct)">Add To Cart</button>
